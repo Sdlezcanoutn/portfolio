@@ -1,0 +1,1081 @@
+/* =========================================================
+   VARIABLES DE COLOR
+========================================================= */
+
+:root {
+    --azul-oscuro: #022E4C;
+    --azul: #517493;
+    --bordo: #56061D;
+    --crema: #E2D9CB;
+}
+
+
+/* =========================================================
+   ESTILOS GENERALES
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--crema);
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+
+header {
+    background-color: var(--azul-oscuro);
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+nav label {
+    display: none;
+}
+
+
+/* =========================================================
+   INICIO
+========================================================= */
+
+#inicio {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    padding: 5rem 10%;
+}
+
+.inicio-contenido {
+    max-width: 650px;
+}
+
+.inicio-etiqueta {
+    color: var(--bordo);
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+#inicio h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    color: var(--azul-oscuro);
+    margin-bottom: 1rem;
+}
+
+#inicio h2 {
+    color: var(--azul);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.inicio-descripcion {
+    max-width: 560px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.inicio-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.inicio-botones a {
+    display: inline-block;
+    padding: 0.8rem 1.3rem;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 50px;
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.inicio-botones a:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+}
+
+.inicio-foto {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.inicio-foto::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--bordo);
+    border-radius: 24px;
+    top: 18px;
+    left: 18px;
+    z-index: 0;
+}
+
+.inicio-foto img {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   SOBRE MÍ
+========================================================= */
+
+#sobre-mi {
+    padding: 7rem 10%;
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+}
+
+.sobre-mi-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.numero-seccion {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--bordo);
+    opacity: 0.8;
+}
+
+.seccion-etiqueta {
+    color: var(--azul);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 0.3rem;
+}
+
+#sobre-mi h2 {
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.sobre-mi-contenido {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.sobre-mi-texto {
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.sobre-mi-texto p + p {
+    margin-top: 1.5rem;
+}
+
+.sobre-mi-datos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.dato {
+    border: 1px solid var(--azul);
+    border-radius: 16px;
+    padding: 1.5rem;
+    min-height: 125px;
+    transition: transform 0.3s ease;
+}
+
+.dato:hover {
+    transform: translateY(-5px);
+}
+
+.dato span {
+    display: block;
+    color: var(--azul);
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.6rem;
+}
+
+.dato p {
+    color: var(--crema);
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONOCIMIENTOS
+========================================================= */
+
+#conocimientos {
+    padding: 7rem 10%;
+    background-color: var(--crema);
+}
+
+.conocimientos-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+#conocimientos .numero-seccion {
+    color: var(--bordo);
+}
+
+#conocimientos .seccion-etiqueta {
+    color: var(--azul);
+    letter-spacing: 4px;
+}
+
+#conocimientos h2 {
+    color: var(--azul-oscuro);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+
+/* CONTENEDOR DE TARJETAS */
+
+.conocimientos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+
+/* TARJETAS */
+
+.conocimiento-card {
+    position: relative;
+    min-height: 260px;
+    padding: 2.5rem;
+    border: 1px solid var(--azul);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.conocimiento-card:hover {
+    transform: translateY(-6px);
+}
+
+.card-numero {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    color: var(--bordo);
+    font-size: 3.5rem;
+    font-weight: bold;
+    opacity: 0.15;
+    line-height: 1;
+}
+
+.conocimiento-card h3 {
+    color: var(--azul-oscuro);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.conocimiento-card h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: var(--bordo);
+    margin-top: 0.7rem;
+}
+
+
+/* TECNOLOGÍAS */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tecnologias span {
+    border: 1px solid var(--azul);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: transparent;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tecnologias span:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+    border-color: var(--azul-oscuro);
+}
+
+.tecnologias small {
+    display: block;
+    color: var(--bordo);
+    font-size: 0.65rem;
+    font-weight: bold;
+    margin-top: 0.1rem;
+}
+
+
+/* =========================================================
+   PROYECTOS
+========================================================= */
+
+#proyectos {
+    padding: 7rem 10%;
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+}
+
+
+/* ENCABEZADO */
+
+.proyectos-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+#proyectos .numero-seccion {
+    color: var(--bordo);
+}
+
+#proyectos .seccion-etiqueta {
+    color: var(--azul);
+    letter-spacing: 4px;
+}
+
+#proyectos h2 {
+    color: var(--crema);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+
+/* ESTRUCTURA DE CADA PROYECTO */
+
+.proyecto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 3.5rem 0;
+    border-top: 1px solid var(--azul);
+}
+
+
+/* =========================================================
+   IMÁGENES DE LOS PROYECTOS
+========================================================= */
+
+.proyecto-imagen {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Marco bordó desplazado */
+
+.proyecto-imagen::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--bordo);
+    border-radius: 20px;
+    top: 14px;
+    left: 14px;
+    z-index: 0;
+}
+
+
+/* Portada del proyecto */
+
+.proyecto-imagen img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+
+/* INFORMACIÓN DEL PROYECTO */
+
+.proyecto-info {
+    position: relative;
+}
+
+.proyecto-info h3 {
+    color: var(--crema);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.proyecto-info > p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+
+/* TECNOLOGÍAS DEL PROYECTO */
+
+.proyecto-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.proyecto-info li {
+    border: 1px solid var(--azul);
+    border-radius: 50px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+}
+
+
+/* CONTEXTO */
+
+.proyecto-contexto {
+    margin-bottom: 1.5rem;
+}
+
+
+/* LINKS */
+
+.proyecto-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.proyecto-info a {
+    display: inline-block;
+    color: var(--crema);
+    text-decoration: none;
+    border-bottom: 2px solid var(--bordo);
+    padding-bottom: 0.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.proyecto-info a:hover {
+    color: var(--azul);
+}
+
+
+/* PROYECTOS INVERTIDOS
+   Proyecto 2 y Proyecto 4:
+   texto a la izquierda / imagen a la derecha
+*/
+
+.proyecto-invertido .proyecto-imagen {
+    order: 2;
+}
+
+.proyecto-invertido .proyecto-info {
+    order: 1;
+}
+
+
+/* =========================================================
+   REDES
+========================================================= */
+
+#redes {
+    padding: 7rem 10%;
+    background-color: var(--crema);
+}
+
+
+/* ENCABEZADO */
+
+.redes-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+#redes .numero-seccion {
+    color: var(--bordo);
+}
+
+#redes .seccion-etiqueta {
+    color: var(--azul);
+    letter-spacing: 4px;
+}
+
+#redes h2 {
+    color: var(--azul-oscuro);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+
+/* CONTENEDOR DE REDES */
+
+.redes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+
+/* TARJETAS */
+
+.red-card {
+    position: relative;
+    min-height: 300px;
+    padding: 2.5rem;
+    border: 1px solid var(--azul);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: var(--azul-oscuro);
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.red-card:hover {
+    transform: translateY(-6px);
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+}
+
+
+/* NÚMERO DECORATIVO */
+
+.red-numero {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+
+    color: var(--bordo);
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 1;
+    opacity: 0.15;
+}
+
+
+/* ETIQUETA SUPERIOR */
+
+.red-etiqueta {
+    color: var(--azul);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
+}
+
+
+/* TÍTULO */
+
+.red-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+/* DESCRIPCIÓN */
+
+.red-card p {
+    line-height: 1.7;
+}
+
+
+/* LINK INFERIOR */
+
+.red-enlace {
+    display: inline-block;
+    width: fit-content;
+
+    margin-top: 2rem;
+    padding-bottom: 0.2rem;
+
+    font-weight: bold;
+    border-bottom: 2px solid var(--bordo);
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+#contacto {
+    padding: 7rem 10%;
+    background-color: var(--crema);
+}
+
+
+/* ENCABEZADO */
+
+.contacto-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+#contacto .numero-seccion {
+    color: var(--bordo);
+}
+
+#contacto .seccion-etiqueta {
+    color: var(--azul);
+    letter-spacing: 4px;
+}
+
+#contacto h2 {
+    color: var(--azul-oscuro);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+
+/* CONTENIDO */
+
+.contacto-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+
+/* INFORMACIÓN DE CONTACTO */
+
+.contacto-info {
+    padding-top: 1rem;
+}
+
+.contacto-texto {
+    max-width: 520px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+
+/* EMAIL */
+
+.contacto-email {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--azul);
+}
+
+.contacto-email span {
+    display: block;
+    color: var(--azul);
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-email a {
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-bottom: 2px solid var(--bordo);
+    padding-bottom: 0.2rem;
+}
+
+.contacto-email a:hover {
+    color: var(--azul);
+}
+
+
+/* FORMULARIO */
+
+.contacto-formulario {
+    border: 1px solid var(--azul);
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+
+/* CAMPOS DEL FORMULARIO */
+
+.campo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.campo-formulario label {
+    display: block;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--azul-oscuro);
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-formulario textarea {
+    resize: vertical;
+}
+
+
+/* EFECTO AL SELECCIONAR UN CAMPO */
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    border-color: var(--bordo);
+}
+
+
+/* BOTÓN ENVIAR */
+
+.contacto-formulario button {
+    border: none;
+    border-radius: 50px;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contacto-formulario button:hover {
+    background-color: var(--bordo);
+}
+
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 2rem 10%;
+    background-color: var(--azul-oscuro);
+    color: var(--crema);
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   CELULARES Y PANTALLAS PEQUEÑAS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -------------------------
+       NAVEGACIÓN
+    ------------------------- */
+
+    nav label {
+        display: block;
+        color: var(--crema);
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    #menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+
+    /* -------------------------
+       INICIO
+    ------------------------- */
+
+    #inicio {
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding: 4rem 1.5rem;
+    }
+
+    .inicio-contenido {
+        max-width: 100%;
+    }
+
+    #inicio h1 {
+        font-size: 3rem;
+    }
+
+    .inicio-descripcion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .inicio-botones {
+        justify-content: center;
+    }
+
+    .inicio-foto img {
+        width: 260px;
+        height: 325px;
+    }
+
+
+    /* -------------------------
+       SOBRE MÍ
+    ------------------------- */
+
+    #sobre-mi {
+        padding: 5rem 1.5rem;
+    }
+
+    .sobre-mi-encabezado {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .numero-seccion {
+        font-size: 3.5rem;
+    }
+
+    #sobre-mi h2 {
+        font-size: 2.2rem;
+    }
+
+    .sobre-mi-contenido {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .sobre-mi-texto {
+        font-size: 1rem;
+    }
+
+    .sobre-mi-datos {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -------------------------
+       CONOCIMIENTOS
+    ------------------------- */
+
+    #conocimientos {
+        padding: 5rem 1.5rem;
+    }
+
+    .conocimientos-encabezado {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #conocimientos .numero-seccion {
+        font-size: 3.5rem;
+    }
+
+    #conocimientos h2 {
+        font-size: 2.5rem;
+    }
+
+    .conocimientos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .conocimiento-card {
+        min-height: auto;
+        padding: 2rem;
+    }
+
+
+    /* -------------------------
+       PROYECTOS
+    ------------------------- */
+
+    #proyectos {
+        padding: 5rem 1.5rem;
+    }
+
+    .proyectos-encabezado {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #proyectos .numero-seccion {
+        font-size: 3.5rem;
+    }
+
+    #proyectos h2 {
+        font-size: 2.5rem;
+    }
+
+    .proyecto {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 3rem 0;
+    }
+
+    .proyecto-imagen img {
+        height: auto;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.7rem;
+    }
+
+    /* En celular:
+       imagen primero / información después
+    */
+
+    .proyecto-invertido .proyecto-imagen {
+        order: 1;
+    }
+
+    .proyecto-invertido .proyecto-info {
+        order: 2;
+    }
+
+        /* -------------------------
+           REDES
+        ------------------------- */
+
+    #redes {
+        padding: 5rem 1.5rem;
+    }
+
+    .redes-encabezado {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #redes .numero-seccion {
+        font-size: 3.5rem;
+    }
+
+    #redes h2 {
+        font-size: 2.5rem;
+    }
+
+    .redes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .red-card {
+        min-height: 250px;
+        padding: 2rem;
+    }
+
+
+        /* -------------------------
+       CONTACTO
+    ------------------------- */
+
+    #contacto {
+        padding: 5rem 1.5rem;
+    }
+
+    .contacto-encabezado {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #contacto .numero-seccion {
+        font-size: 3.5rem;
+    }
+
+    #contacto h2 {
+        font-size: 2.5rem;
+    }
+
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contacto-formulario {
+        padding: 2rem;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+}
