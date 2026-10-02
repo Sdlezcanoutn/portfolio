@@ -923,6 +923,47 @@ nav label {
         color 0.3s ease;
 }
 
+/* =========================================================
+   ÍCONO DE RED
+========================================================= */
+
+.red-icono {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: rgba(86, 6, 29, 0.08);
+
+    position: relative;
+    z-index: 1;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.red-icono svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--azul-oscuro);
+
+    transition: fill 0.3s ease;
+}
+
+.red-card:hover .red-icono {
+    transform: scale(1.08);
+    background-color: var(--crema);
+}
+
+.red-card:hover .red-icono svg {
+    fill: var(--azul-oscuro);
+}
+
 .red-card:hover .red-numero {
     color: var(--crema);
     opacity: 0.12;
@@ -1509,6 +1550,16 @@ footer {
         padding-right: 2.2rem;
     }
 
+    .red-icono {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 0.8rem;
+    }
+
+    .red-icono svg {
+        width: 22px;
+        height: 22px;
+    }
 
 
     /* -------------------------
